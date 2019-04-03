@@ -2,7 +2,7 @@
 
 ![dashboard-home](./images/dashboard-home.png)
 
-本系列文档介绍使用二进制部署最新 `kubernetes v1.10.4` 集群的所有步骤，而不是使用 `kubeadm` 等自动化方式来部署集群。
+本系列文档介绍使用二进制部署最新 `kubernetes v1.12.3` 集群的所有步骤，而不是使用 `kubeadm` 等自动化方式来部署集群。
 
 在部署的过程中，将详细列出各组件的启动参数，它们的含义和可能遇到的问题。
 
@@ -16,7 +16,9 @@
 
 ## 历史版本
 
-[v1.6.2](https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/v1.6.2)
++ [v1.6.2](https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/v1.6.2)：已停止更新；
++ [v1.8.x](https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/v1.8.x)：继续更新；
++ [v1.10.x](https://github.com/opsnull/follow-me-install-kubernetes-cluster/tree/v1.10.x)：继续更新；
 
 ## 步骤列表
 
@@ -25,10 +27,10 @@
 1. [02.创建CA证书和秘钥](02.创建CA证书和秘钥.md)			
 1. [03.部署kubectl命令行工具](03.部署kubectl命令行工具.md)			
 1. [04.部署etcd集群](04.部署etcd集群.md)				
-1. [05.部署flannel网络](05.部署flannel网络.md)			
-1. [06.部署master节点](06-0.部署master节点.md)
-    1. [06-1.ha.md](06-1.ha.md)
-    1. [06-2.api-server](06-2.api-server.md)	
+1. [05.部署flannel网络](05.部署flannel网络.md)		
+1. [06-0.apiserver高可用之nginx代理.md](06-0.apiserver高可用之nginx代理.md)
+1. [06-1.部署master节点](06-0.部署master节点.md)
+    1. [06-2.apiserver集群](06-2.apiserver集群.md)	
     1. [06-3.controller-manager集群](06-3.controller-manager集群.md)
     1. [06-4.scheduler集群](06-4.scheduler集群.md)		
 1. [07.部署worker节点](07-0.部署worker节点.md)
@@ -46,6 +48,7 @@
 1. [11.部署Harbor-Registry](11.部署Harbor-Registry.md)	
 1. [12.清理集群](12.清理集群.md)
 1. [A.浏览器访问apiserver安全端口](A.浏览器访问kube-apiserver安全端口.md)
+1. [B.校验TLS证书](B.校验TLS证书.md)
 
 ## 在线阅读
 
@@ -67,6 +70,6 @@
 
 ## 版权
 
-Copyright 2017-2018 zhangjun (geekard@qq.com)
+Copyright 2017-2019 zhangjun (geekard@qq.com)
 
 知识共享 署名-非商业性使用-相同方式共享 4.0（CC BY-NC-SA 4.0），详情见 [LICENSE](LICENSE) 文件。
